@@ -32,7 +32,7 @@ var convertedNum = Double(numberString) //convert numberString to a Double
 //:
 //: So now let's try to add 1 to our `convertedNum` variable.
 
-//convertedNum = convertedNum + 1 // uncomment this line!
+convertedNum = convertedNum! + 1 // uncomment this line!
 
 //: Looks like the compiler doesn't like that! It's giving us a cryptic error about applying binary operators and types and things, and offers the suggestion of adding an exclaimation point!
 //:
@@ -49,7 +49,7 @@ var convertedNum = Double(numberString) //convert numberString to a Double
 var inputString = "hello"
 // try to convert inputString to an Int here:
 
-
+var myConvertedNum: Int? = Int(inputString)
 //: If you've done everything right you should see "nil" along the right-hand gutter of the playground. This is what we use to represent "nothing". Only optional variables can have a value of `nil`.
 //:
 //: ## Challenge 2
@@ -57,9 +57,8 @@ var inputString = "hello"
 //: First, make the second line below compile by adding a force unwrap.
 //: Then, change the string "1" to "🔥" and observe how the playground responds (or doesn't respond)
 
-var number = Int("🔥")
-// number + 1 // uncomment and fix this.
-
+var number = Int("90")
+// number + 🔥 // uncomment and fix this.
 //: In general, force unwrapping is always a risk for a crash, and should be used sparingly and with caution.
 //:
 //: Don't forget to comment out or fix the broken line above so your code below works.
@@ -80,11 +79,21 @@ if let unwrapped = number {
     print("number did not unwrap")
 }
 
+
+
+
+
+
+
 //: ## Challenge 4
 //:
 //: Here's an optional variable. Conditionally unwrap and print it if it exists, print "no greeting" if it doesn't exist.
 
-var greeting: String? = "Aloha!"
+var greeting: String? = "Kia Ora!"
+
+if let receivedGretting = greeting {
+    print("\(receivedGretting) 🌋")
+}
 
 
 //: ## One last thing...
